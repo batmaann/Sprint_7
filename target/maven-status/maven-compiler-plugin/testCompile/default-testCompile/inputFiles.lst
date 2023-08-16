@@ -1,1 +1,12 @@
-/Users/prime/MK/Education/git/v1/Sprint_7/src/test/java/RestAssuredGetAllureTest.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/BaseHttp.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/order/OrderData.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/courier/CourierHttp.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/CreatingCourier.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/examplesData/ExamplesData.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/LoginCourier.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/order/OrdersHttp.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/courier/CourierData.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/ListOrder.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/org/example/baseUrl/BaseUrl.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/RestAssuredGetAllureTest.java
+/Users/prime/MK/Education/git/v2/Sprint_7/src/test/java/CreateOrder.java

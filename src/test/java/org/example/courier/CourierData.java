@@ -3,7 +3,7 @@ package org.example.courier;
 public class CourierData {
     private String login;
     private String password;
-    private String id;
+    public String id;
 
     public String getId() {
         return id;

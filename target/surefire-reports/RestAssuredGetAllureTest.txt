@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: RestAssuredGetAllureTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.771 s <<< FAILURE! - in RestAssuredGetAllureTest
-checkUserName(RestAssuredGetAllureTest)  Time elapsed: 7.149 s  <<< FAILURE!
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.666 s <<< FAILURE! - in RestAssuredGetAllureTest
+checkUserName(RestAssuredGetAllureTest)  Time elapsed: 1.416 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path data.name doesn't match.
@@ -11,7 +11,7 @@ Expected: сюда впиши имя пользователя
 
 	at RestAssuredGetAllureTest.checkUserName(RestAssuredGetAllureTest.java:31)
 
-checkUserNameAndPrintResponseBody(RestAssuredGetAllureTest)  Time elapsed: 0.163 s  <<< FAILURE!
+checkUserNameAndPrintResponseBody(RestAssuredGetAllureTest)  Time elapsed: 0.083 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path data.name doesn't match.
@@ -20,7 +20,7 @@ Expected: сюда впиши имя пользователя
 
 	at RestAssuredGetAllureTest.checkUserNameAndPrintResponseBody(RestAssuredGetAllureTest.java:40)
 
-getMyInfoStatusCode(RestAssuredGetAllureTest)  Time elapsed: 0.245 s  <<< FAILURE!
+getMyInfoStatusCode(RestAssuredGetAllureTest)  Time elapsed: 0.104 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <401>.
