@@ -3,60 +3,21 @@ package org.example.courier;
 public class CourierData {
     private String login;
     private String password;
-    public String id;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public CourierData(String id) {
-        this.id = id;
-    }
-
-
-
-
-    public CourierData(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
-
-
-
-    public CourierData(String login, String password, String firstName) {
-        this.login = login;
-        this.password = password;
-        this.firstName = firstName;
-    }
-
     private String firstName;
 
-    public String getLogin() {
-        return login;
-    }
 
-    public void setLogin(String login) {
+
+    public CourierData withLogin(String login){
         this.login = login;
+        return this;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
+    public CourierData withPassword(String password){
         this.password = password;
+        return this;
     }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
+    public CourierData withFirstName(String firstName){
         this.firstName = firstName;
+        return this;
     }
 
 

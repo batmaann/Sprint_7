@@ -24,9 +24,9 @@ public class CourierHttp extends BaseHttp {
         return doPostRequest(url + AUTH_COURIER, courierData);
     }
 
-    public ValidatableResponse deleteCourier(CourierData courierData){
-        return doDeleteRequest(url + DELETE_COURIER + courierData.getId() , courierData);
-    }
+//    public ValidatableResponse deleteCourier(CourierData courierData){
+//        return doDeleteRequest(url + DELETE_COURIER + courierData.getId() , courierData);
+//    }
 
 
 
