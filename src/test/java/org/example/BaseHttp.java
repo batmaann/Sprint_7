@@ -18,19 +18,6 @@ abstract public class BaseHttp {
 
     }
 
-    public ValidatableResponse doPostRequest (String baseUrl) {
-        return given (baseRequest ()).post(baseUrl).then();
-    }
-
-    public ValidatableResponse doGetRequest (String url) {
-        return given (baseRequest ()).get (url) .then();
-    }
-
-    public ValidatableResponse doDeleteRequest ( String baseUrl, Object body) {
-        RequestSpecification request = given(baseRequest());
-        request.body(body);
-        return request.delete(baseUrl).then();
-    }
 
 
     private RequestSpecification baseRequest() {

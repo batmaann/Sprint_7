@@ -2,17 +2,11 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import jdk.jfr.Description;
 import org.example.baseUrl.BaseUrl;
-import org.example.courier.CourierData;
-import org.example.courier.CourierHttp;
 import org.example.order.OrdersHttp;
 import org.example.order.OrderData;
-import org.example.order.OrdersHttp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import java.awt.*;
-import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -61,7 +55,6 @@ public class CreateOrder {
     public void createOrder() {
         OrderData request = new OrderData(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
         ValidatableResponse response = ordersHttp.createOrder(request);
-        OrderData responseBody = response.extract().body().as(OrderData.class);
         assertThat(response.extract().statusCode()).isEqualTo(201);
         assertThat(response.extract().body().jsonPath().getString("track")).isNotNull();
 

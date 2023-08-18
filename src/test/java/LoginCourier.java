@@ -21,7 +21,6 @@ public class LoginCourier {
     public void testAuthCourier() {
         CourierData request = ExamplesData.validCourier();
         ValidatableResponse response = courierHttp.authCourier(request);
-        CourierData responseBody = response.extract().body().as(CourierData.class);
         assertThat(response.extract().statusCode()).isEqualTo(200);
         ValidatableResponse response1 = courierHttp.authCourier(request);
         String idValue = response.extract().body().jsonPath().getString("id");
@@ -37,7 +36,6 @@ public class LoginCourier {
         ValidatableResponse response = courierHttp.authCourier(request);
         int statusCode = response.extract().statusCode();
         if (statusCode == 400) {
-            CourierData responseBody = response.extract().body().as(CourierData.class);
             assertThat(response.extract().body().jsonPath().getString("message"))
                     .isEqualTo("Недостаточно данных для входа");
         } else if (statusCode == 404) {
@@ -53,7 +51,6 @@ public class LoginCourier {
         ValidatableResponse response = courierHttp.authCourier(request);
         int statusCode = response.extract().statusCode();
         if (statusCode == 400) {
-            CourierData responseBody = response.extract().body().as(CourierData.class);
             assertThat(response.extract().body().jsonPath().getString("message"))
                     .isEqualTo("Недостаточно данных для входа");
         } else if (statusCode == 404) {

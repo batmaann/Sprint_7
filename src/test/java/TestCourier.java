@@ -1,16 +1,12 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import jdk.jfr.Description;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.example.baseUrl.BaseUrl;
 import org.example.courier.CourierData;
 import org.example.courier.CourierHttp;
 import org.example.examplesData.ExamplesData;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -33,7 +29,7 @@ public class TestCourier {
 
         CourierData request = ExamplesData.CourierNoNameAndFirstName();
         ValidatableResponse response = courierHttp.createCourier(request);
-        CourierData responseBody = response.extract().body().as(CourierData.class);
+        //CourierData responseBody = response.extract().body().as(CourierData.class);
         assertThat(response.extract().statusCode()).isEqualTo(400);
 
     }
@@ -44,7 +40,7 @@ public class TestCourier {
     public void testCreateCourierNoRequiredFieldLogin() {
         CourierData request = ExamplesData.CourierNoName();
         ValidatableResponse response = courierHttp.createCourier(request);
-        CourierData responseBody = response.extract().body().as(CourierData.class);
+        //CourierData responseBody = response.extract().body().as(CourierData.class);
         assertThat(response.extract().statusCode()).isEqualTo(400);
     }
 
@@ -57,7 +53,6 @@ public class TestCourier {
         ValidatableResponse response = courierHttp.authCourier(request);
         int statusCode = response.extract().statusCode();
         if (statusCode == 400) {
-            CourierData responseBody = response.extract().body().as(CourierData.class);
             assertThat(response.extract().body().jsonPath().getString("message"))
                     .isEqualTo("Недостаточно данных для входа");
         } else if (statusCode == 404) {
@@ -68,7 +63,6 @@ public class TestCourier {
     @DisplayName("Создание дубля УЗ")
     @Description("Создание дублей обработка ошибок 201 и 409")
     public void testCreateCourierDouble() {
-        CourierData request = ExamplesData.randomCourier();
         CourierData request1 = ExamplesData.randomCourier();
         // Создаем первого курьера
         ValidatableResponse response1 = courierHttp.createCourier(request1);
