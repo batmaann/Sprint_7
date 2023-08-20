@@ -29,7 +29,6 @@ public class TestCourier {
 
         CourierData request = ExamplesData.CourierNoNameAndFirstName();
         ValidatableResponse response = courierHttp.createCourier(request);
-        //CourierData responseBody = response.extract().body().as(CourierData.class);
         assertThat(response.extract().statusCode()).isEqualTo(400);
 
     }
@@ -40,7 +39,6 @@ public class TestCourier {
     public void testCreateCourierNoRequiredFieldLogin() {
         CourierData request = ExamplesData.CourierNoName();
         ValidatableResponse response = courierHttp.createCourier(request);
-        //CourierData responseBody = response.extract().body().as(CourierData.class);
         assertThat(response.extract().statusCode()).isEqualTo(400);
     }
 
@@ -64,10 +62,8 @@ public class TestCourier {
     @Description("Создание дублей обработка ошибок 201 и 409")
     public void testCreateCourierDouble() {
         CourierData request1 = ExamplesData.randomCourier();
-        // Создаем первого курьера
         ValidatableResponse response1 = courierHttp.createCourier(request1);
         assertThat(response1.extract().statusCode()).isEqualTo(201);
-        // Попытка создать второго курьера с теми же данными
         ValidatableResponse response2 = courierHttp.createCourier(request1);
         assertThat(response2.extract().statusCode()).isEqualTo(409);
     }

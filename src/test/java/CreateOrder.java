@@ -59,4 +59,5 @@ public class CreateOrder {
         assertThat(response.extract().body().jsonPath().getString("track")).isNotNull();
 
     }
+
 }

@@ -17,7 +17,12 @@ abstract public class BaseHttp {
         return request.post(baseUrl).then();
 
     }
+    public ValidatableResponse doGetRequest (String baseUrl , Object body) {
+        RequestSpecification request = given(baseRequest());
+        request.body(body);
+        return request.get(baseUrl).then();
 
+    }
 
 
     private RequestSpecification baseRequest() {
