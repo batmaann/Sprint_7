@@ -1,0 +1,12 @@
+ListOrder.class
+org/example/courier/CourierHttp.class
+CreateOrder.class
+org/example/order/OrdersHttp.class
+RestAssuredGetAllureTest.class
+CreatingCourier.class
+org/example/order/OrderData.class
+org/example/BaseHttp.class
+org/example/courier/CourierData.class
+org/example/baseUrl/BaseUrl.class
+org/example/examplesData/ExamplesData.class
+LoginCourier.class
