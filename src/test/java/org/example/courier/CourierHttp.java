@@ -28,10 +28,4 @@ public class CourierHttp extends BaseHttp {
 //        return doDeleteRequest(url + DELETE_COURIER + courierData.getId() , courierData);
 //    }
 
-
-
-
-
-
-
 }
